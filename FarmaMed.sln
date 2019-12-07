@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{0EDCE23D-0B10-4C6D-ACD1-510D4BE3D9F9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{FCE80149-38CD-4040-982C-CBF7F3346739}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{3889D93A-EE2D-45B9-A59A-2A797096F268}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{B4C199D2-45FE-4D09-A858-F6DD1A254386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.DomainModel", "FarmaMed.DomainModel\FarmaMed.DomainModel.csproj", "{A39C3210-7D50-444F-B39D-5317176EAA8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaMed.DomainModel", "FarmaMed.DomainModel\FarmaMed.DomainModel.csproj", "{A39C3210-7D50-444F-B39D-5317176EAA8A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_UnitTests", "_UnitTests", "{BF499B69-30AE-4EA6-94C3-32354E4BAA8C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - UnitTests", "0 - UnitTests", "{BF499B69-30AE-4EA6-94C3-32354E4BAA8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.DomainService", "FarmaMed.DomainService\FarmaMed.DomainService.csproj", "{E4AF1915-CA73-482E-A0F9-BA1458B9908A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaMed.DomainService", "FarmaMed.DomainService\FarmaMed.DomainService.csproj", "{E4AF1915-CA73-482E-A0F9-BA1458B9908A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.Infra", "FarmaMed.Infra\FarmaMed.Infra.csproj", "{249D3A18-ACC6-43D0-9208-4B22C145A157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaMed.Infra", "FarmaMed.Infra\FarmaMed.Infra.csproj", "{249D3A18-ACC6-43D0-9208-4B22C145A157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.API", "FarmaMed.API\FarmaMed.API.csproj", "{DF303972-69EC-4E0D-894B-AADFF6442AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +37,10 @@ Global
 		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF303972-69EC-4E0D-894B-AADFF6442AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF303972-69EC-4E0D-894B-AADFF6442AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF303972-69EC-4E0D-894B-AADFF6442AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF303972-69EC-4E0D-894B-AADFF6442AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +49,7 @@ Global
 		{A39C3210-7D50-444F-B39D-5317176EAA8A} = {3889D93A-EE2D-45B9-A59A-2A797096F268}
 		{E4AF1915-CA73-482E-A0F9-BA1458B9908A} = {3889D93A-EE2D-45B9-A59A-2A797096F268}
 		{249D3A18-ACC6-43D0-9208-4B22C145A157} = {B4C199D2-45FE-4D09-A858-F6DD1A254386}
+		{DF303972-69EC-4E0D-894B-AADFF6442AB5} = {FCE80149-38CD-4040-982C-CBF7F3346739}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F81B7F3C-10AD-460F-BE78-4CB42E54FF94}

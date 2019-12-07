@@ -19,27 +19,26 @@ namespace FarmaMed.Infra.Context
                 Database.EnsureCreated();
             }
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.EnableDetailedErrors(true);
+            //optionsBuilder.EnableDetailedErrors(true);
             optionsBuilder.EnableSensitiveDataLogging(true);
-            optionsBuilder.UseSqlServer(Resources.DbConnectionString);
-
+            //optionsBuilder.UseSqlServer(Resources.DbConnectionString);
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            foreach (var property in modelBuilder.Model.GetEntityTypes()
-                .SelectMany(e => e.GetProperties()
-                 .Where(p => p.ClrType == typeof(string))))
-                property.SetColumnType("varchar(100)");
+            //foreach (var property in modelBuilder.Model.GetEntityTypes()
+            //    .SelectMany(e => e.GetProperties()
+            //     .Where(p => p.ClrType == typeof(string))))
+            //    property.SetColumnType("varchar(100)");
 
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(FarmaMedContext).Assembly);
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(FarmaMedContext).Assembly);
 
-            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+            //foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
             base.OnModelCreating(modelBuilder);
 

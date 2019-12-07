@@ -40,11 +40,6 @@ namespace FarmaMed.DomainService
         public async Task<IEnumerable<Medicamento>> BuscarTodosMedicamentos()
         {
             return await _medicamentoRepository.ReadAll();
-        }  
-
-        public void Dispose()
-        {
-            _medicamentoRepository?.Dispose();
         }
     }
 }

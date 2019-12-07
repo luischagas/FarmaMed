@@ -41,10 +41,5 @@ namespace FarmaMed.DomainService
         {
             return await _sintomaRepository.ReadAll();
         }
-
-        public void Dispose()
-        {
-            _sintomaRepository?.Dispose();
-        }
     }
 }

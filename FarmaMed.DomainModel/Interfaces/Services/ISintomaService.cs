@@ -1,12 +1,11 @@
 ﻿using FarmaMed.DomainModel.MedicamentoAggregate;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FarmaMed.DomainModel.Interfaces.Services
 {
-    public interface ISintomaService : IDisposable
+    public interface ISintomaService
     {
         Task<Sintoma> BuscarSintoma(Guid id);
         Task<IEnumerable<Sintoma>> BuscarTodosSintomas();
