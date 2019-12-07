@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{0EDCE23D-0B10-4C6D-ACD1-510D4BE3D9F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{FCE80149-38CD-4040-982C-CBF7F3346739}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{3889D93A-EE2D-45B9-A59A-2A797096F268}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{B4C199D2-45FE-4D09-A858-F6DD1A254386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.DomainModel", "FarmaMed.DomainModel\FarmaMed.DomainModel.csproj", "{A39C3210-7D50-444F-B39D-5317176EAA8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_UnitTests", "_UnitTests", "{BF499B69-30AE-4EA6-94C3-32354E4BAA8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.DomainService", "FarmaMed.DomainService\FarmaMed.DomainService.csproj", "{E4AF1915-CA73-482E-A0F9-BA1458B9908A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaMed.Infra", "FarmaMed.Infra\FarmaMed.Infra.csproj", "{249D3A18-ACC6-43D0-9208-4B22C145A157}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39C3210-7D50-444F-B39D-5317176EAA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39C3210-7D50-444F-B39D-5317176EAA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39C3210-7D50-444F-B39D-5317176EAA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39C3210-7D50-444F-B39D-5317176EAA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AF1915-CA73-482E-A0F9-BA1458B9908A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AF1915-CA73-482E-A0F9-BA1458B9908A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AF1915-CA73-482E-A0F9-BA1458B9908A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AF1915-CA73-482E-A0F9-BA1458B9908A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249D3A18-ACC6-43D0-9208-4B22C145A157}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A39C3210-7D50-444F-B39D-5317176EAA8A} = {3889D93A-EE2D-45B9-A59A-2A797096F268}
+		{E4AF1915-CA73-482E-A0F9-BA1458B9908A} = {3889D93A-EE2D-45B9-A59A-2A797096F268}
+		{249D3A18-ACC6-43D0-9208-4B22C145A157} = {B4C199D2-45FE-4D09-A858-F6DD1A254386}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F81B7F3C-10AD-460F-BE78-4CB42E54FF94}
+	EndGlobalSection
+EndGlobal
