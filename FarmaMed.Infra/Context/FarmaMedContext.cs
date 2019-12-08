@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using FarmaMed.DomainModel.MedicamentoAggregate;
+using FarmaMed.Infra.Mappings;
 using FarmaMed.Infra.Properties;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,12 +37,15 @@ namespace FarmaMed.Infra.Context
             //     .Where(p => p.ClrType == typeof(string))))
             //    property.SetColumnType("varchar(100)");
 
-            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(FarmaMedContext).Assembly);
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(FarmaMedContext).Assembly);            
 
             //foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
+            modelBuilder.ApplyConfiguration(new MedicamentoMapping());
+            modelBuilder.ApplyConfiguration(new SintomaMapping());
+            modelBuilder.ApplyConfiguration(new MedicamentoSintomaMapping());
+            
             base.OnModelCreating(modelBuilder);
-
         }
     }
 }

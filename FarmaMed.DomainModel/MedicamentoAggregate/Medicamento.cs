@@ -10,6 +10,6 @@ namespace FarmaMed.DomainModel.MedicamentoAggregate
 
         public decimal Preco { get; set; }
 
-        public List<MedicamentoSintoma> MedicamentoSintoma { get; set; } = new List<MedicamentoSintoma>();
+        public List<MedicamentoSintoma> MedicamentoSintomas { get; set; } = new List<MedicamentoSintoma>();
     }
 }

@@ -17,6 +17,8 @@ namespace FarmaMed.Infra.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(100)");
 
+            builder.Property(p => p.Preco);
+
             builder.ToTable("Medicamentos");
         }
     }
