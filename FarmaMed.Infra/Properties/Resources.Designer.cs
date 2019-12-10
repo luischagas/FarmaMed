@@ -59,14 +59,5 @@ namespace FarmaMed.Infra.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to STRING DE CONEXÃO.
-        /// </summary>
-        internal static string DbConnectionString {
-            get {
-                return ResourceManager.GetString("DbConnectionString", resourceCulture);
-            }
-        }
     }
 }

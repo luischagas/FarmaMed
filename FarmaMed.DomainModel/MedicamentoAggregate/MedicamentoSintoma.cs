@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FarmaMed.DomainModel.MedicamentoAggregate
 {
-    public class MedicamentoSintoma : EntityBase
+    public class MedicamentoSintoma
     {
         public Guid MedicamentoId { get; set; }
         public Medicamento Medicamento { get; set; }

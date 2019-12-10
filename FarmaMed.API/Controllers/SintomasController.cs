@@ -1,6 +1,10 @@
-﻿using FarmaMed.DomainModel.Interfaces.Services;
+﻿using AutoMapper;
+using FarmaMed.API.ViewModels;
+using FarmaMed.DomainModel.Interfaces.Services;
 using FarmaMed.DomainModel.MedicamentoAggregate;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FarmaMed.API.Controllers
@@ -10,22 +14,29 @@ namespace FarmaMed.API.Controllers
     public class SintomasController : ControllerBase
     {
         private readonly ISintomaService _service;
+        private readonly IMapper _mapper;
 
-        public SintomasController(ISintomaService service)
+        public SintomasController(ISintomaService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var sintomas = await _service.BuscarTodosSintomas();
+            var sintomas = _mapper.Map<IEnumerable<SintomaViewModel>>(await _service.BuscarTodosSintomas());
             return Ok(sintomas);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Sintoma sintoma)
+        public async Task<IActionResult> Post(SintomaViewModel viewModel)
         {
+            var sintoma = new Sintoma
+            {
+                Descricao = viewModel.Descricao
+            };
+
             await _service.AdicionarSintoma(sintoma);
             return Ok();
         }

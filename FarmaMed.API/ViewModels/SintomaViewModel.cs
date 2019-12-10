@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace FarmaMed.API.ViewModels
 {
-    public class NewMedicamentoViewModel
+    public class SintomaViewModel
     {
         public Guid Id { get; set; }
-        public string Nome { get; set; }
-        public decimal Preco { get; set; }
-        public List<Guid> Sintomas { get; set; }
+        public string Descricao { get; set; }
     }
 }

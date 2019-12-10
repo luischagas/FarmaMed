@@ -1,10 +1,6 @@
-﻿using FarmaMed.DomainModel.Interfaces.Repositories;
-using FarmaMed.DomainModel.Interfaces.Services;
-using FarmaMed.DomainModel.Interfaces.UoW;
-using FarmaMed.DomainService;
+﻿using AutoMapper;
+using FarmaMed.API.Configuration;
 using FarmaMed.Infra.Context;
-using FarmaMed.Infra.Repository;
-using FarmaMed.Infra.UoW;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -36,13 +32,10 @@ namespace FarmaMed.API
                 opts.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
 
-            services.AddScoped<IUnitOfWork, EntityFrameworkUnitOfWork>();
+            services.AddAutoMapper(typeof(Startup));
 
-            services.AddScoped<IMedicamentoService, MedicamentoService>();
-            services.AddScoped<ISintomaService, SintomaService>();
+            services.ResolveDependencies();
 
-            services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
-            services.AddScoped<ISintomaRepository, SintomaRepository>();
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
