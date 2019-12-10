@@ -12,8 +12,7 @@ namespace FarmaMed.API.Configuration
     public static class DependencyInjectionConfig
     {
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
-        {
-            services.AddDbContext<FarmaMedContext>();
+        {            
             services.AddScoped<IUnitOfWork, EntityFrameworkUnitOfWork>();
 
             services.AddScoped<IMedicamentoService, MedicamentoService>();
